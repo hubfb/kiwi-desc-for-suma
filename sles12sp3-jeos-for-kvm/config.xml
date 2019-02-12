@@ -12,7 +12,7 @@
         <bootsplash-theme>SLE</bootsplash-theme>
         <bootloader-theme>SLE</bootloader-theme>
         <locale>en_US</locale>
-        <keytable>fr</keytable>
+        <keytable>us</keytable>
         <timezone>Europe/Paris</timezone>
         <hwclock>utc</hwclock>
 	<rpm-excludedocs>true</rpm-excludedocs>
