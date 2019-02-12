@@ -56,7 +56,7 @@ rm /var/lib/systemd/random-seed
 # SuSEconfig
 #--------------------------------------
 #echo "** Running suseConfig..."
-#suseConfig
+suseConfig
 
 echo "** Running ldconfig..."
 /sbin/ldconfig
