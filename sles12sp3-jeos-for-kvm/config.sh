@@ -62,6 +62,11 @@ echo "** Running ldconfig..."
 /sbin/ldconfig
 
 #======================================
+# Disable firstboot wizard
+#======================================
+systemd.firstboot=off
+
+#======================================
 # Setup baseproduct link
 #--------------------------------------
 suseSetupProduct
