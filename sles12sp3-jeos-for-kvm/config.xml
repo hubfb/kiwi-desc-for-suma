@@ -18,7 +18,6 @@
         <type
             image="vmx"
             filesystem="btrfs"
-            boot="vmxboot/suse-SLES12"
             format="qcow2"
             bootloader="grub2"
             firmware="uefi"
@@ -72,7 +71,7 @@
         <package name="curl"/> <!-- needed for openQA, maybe delete -->
         <package name="dracut"/>
         <package name="fipscheck"/>
-        <package name="grub2-branding-SLE" bootinclude="true"/>
+        <package name="grub2-branding-SLE"/>
         <package name="iputils"/>
         <package name="zypper-lifecycle-plugin"/> <!-- bsc#1030278 fate#320597 -->
         <package name="vim"/>
@@ -97,7 +96,7 @@
         <package name="iproute2"/> 
         <package name="openssh"/>
         <package name="elfutils"/>
-        <package name="kernel-default-base" bootinclude="true" replaces="kernel-default"/>
+        <package name="kernel-default-base"/>
         <package name="python-base"/>
         <package name="rsync"/>
 	<package name="salt-minion"/>
