@@ -25,22 +25,10 @@
 test -f /.kconfig && . /.kconfig
 test -f /.profile && . /.profile
 
-# mkdir /var/lib/named
-# mkdir /var/lib/pgsql
-# mkdir /var/lib/mailman
-# mkdir /boot/grub2/i386-pc
-
-#mkdir /var/lib/misc/reconfig_system
-
 #======================================
 # Greeting...
 #--------------------------------------
 echo "Configure image: [$name]..."
-
-#======================================
-# add missing fonts
-#--------------------------------------
-CONSOLE_FONT="lat9w-16.psfu"
 
 #======================================
 # prepare for setting root pw, timezone
@@ -55,16 +43,11 @@ rm /var/lib/systemd/random-seed
 #======================================
 # SuSEconfig
 #--------------------------------------
-#echo "** Running suseConfig..."
+echo "** Running suseConfig..."
 suseConfig
 
 echo "** Running ldconfig..."
 /sbin/ldconfig
-
-#======================================
-# Disable firstboot wizard
-#======================================
-systemd.firstboot=off
 
 #======================================
 # Setup baseproduct link
@@ -104,6 +87,11 @@ chkconfig SuSEfirewall2_setup on
 # Enable sshd
 #--------------------------------------
 chkconfig sshd on
+
+#======================================
+# Disable firstboot wizard
+#--------------------------------------
+systemctl disable systemd-firstboot
 
 #======================================
 # Remove doc files
