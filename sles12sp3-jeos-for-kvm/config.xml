@@ -12,8 +12,8 @@
         <bootsplash-theme>SLE</bootsplash-theme>
         <bootloader-theme>SLE</bootloader-theme>
         <locale>en_US</locale>
-        <keytable>fr</keytable>
-        <timezone>UTC</timezone>
+        <keytable>fr.map.gz</keytable>
+        <timezone>Europe/Paris</timezone>
 	<rpm-excludedocs>true</rpm-excludedocs>
         <type
             image="vmx"
@@ -22,7 +22,7 @@
             format="qcow2"
             bootloader="grub2"
             firmware="uefi"
-            kernelcmdline="systemd.show_status=0 plymouth.enable=0"
+            kernelcmdline="systemd.show_status=0 plymouth.enable=0 systemd.firstboot=off"
             bootpartition="false"
             bootkernel="custom"
             devicepersistency="by-label"
