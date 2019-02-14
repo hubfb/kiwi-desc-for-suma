@@ -22,7 +22,7 @@
             format="qcow2"
             bootloader="grub2"
             firmware="uefi"
-            kernelcmdline="systemd.show_status=0 plymouth.enable=0 systemd.firstboot=off"
+            kernelcmdline="systemd.show_status=0 plymouth.enable=0 systemd.firstboot=0"
             bootpartition="false"
             bootkernel="custom"
             devicepersistency="by-label"
